@@ -1972,7 +1972,7 @@ while (1)
 			break;
 
 		case 'b':
-			sscanf(optarg, "%"SCNu64, &opt_break_size);
+			sscanf(optarg, L"%" SCNu64, &opt_break_size);
 			errno = 0;
 			break;
 

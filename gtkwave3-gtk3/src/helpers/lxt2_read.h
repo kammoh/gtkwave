@@ -32,6 +32,7 @@ extern "C" {
 #include <string.h>
 #include <ctype.h>
 #include <errno.h>
+#include <inttypes.h>
 
 #ifndef _MSC_VER
 #include <unistd.h>
@@ -83,8 +84,8 @@ typedef uint64_t	 	lxtint64_t;
 typedef int32_t			lxtsint32_t;
 typedef int64_t			lxtsint64_t;
 #ifndef __MINGW32__
-#define LXT2_RD_LLD "%"PRId64
-#define LXT2_RD_LD "%"PRId32
+#define LXT2_RD_LLD L"%" PRId64
+#define LXT2_RD_LD L"%" PRId32
 #else
 #define LXT2_RD_LLD "%I64d"
 #define LXT2_RD_LD "%d"
