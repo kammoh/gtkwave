@@ -40,7 +40,7 @@
 #include <sys/types.h>
 #endif
 
-#if !defined __MINGW32__ && !defined(__APPLE__)
+#if !defined __MINGW32__
 #define WAVE_USE_XID
 #else
 #undef WAVE_USE_XID
@@ -82,7 +82,6 @@
 
 #ifdef MAC_INTEGRATION
 #include <gtkosxapplication.h>
-void macos_force_foreground_level();
 #endif
 
 char *gtkwave_argv0_cached = NULL;
@@ -2122,10 +2121,6 @@ if(!GLOBALS->socket_xid)
 #endif
 
 	GLOBALS->mainwindow = gtk_window_new(GLOBALS->disable_window_manager ? GTK_WINDOW_POPUP : GTK_WINDOW_TOPLEVEL);
-#ifdef MAC_INTEGRATION
-	gtk_window_set_keep_above(GTK_WINDOW(GLOBALS->mainwindow), TRUE);
-	macos_force_foreground_level();
-#endif
 	wave_gtk_window_set_title(GTK_WINDOW(GLOBALS->mainwindow), GLOBALS->winname, GLOBALS->dumpfile_is_modified ? WAVE_SET_TITLE_MODIFIED: WAVE_SET_TITLE_NONE, 0);
 
 	if((GLOBALS->initial_window_width>0)&&(GLOBALS->initial_window_height>0))
