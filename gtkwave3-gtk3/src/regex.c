@@ -15,9 +15,6 @@
 #include <sys/types.h>
 #include <stdlib.h>
 #define REGEX_MALLOC
-#ifndef STDC_HEADERS
-#define STDC_HEADERS
-#endif
 #endif
 #endif
 
