@@ -685,11 +685,6 @@ fi
 # Checks for header files.
 AC_FUNC_ALLOCA
 AC_HEADER_DIRENT
-# Autoupdate added the next two lines to ensure that your configure
-# script's behavior did not change.  They are probably safe to remove.
-AC_CHECK_INCLUDES_DEFAULT
-AC_PROG_EGREP
-
 AC_HEADER_SYS_WAIT
 AC_CHECK_HEADERS([fcntl.h inttypes.h libintl.h limits.h malloc.h stddef.h stdint.h stdlib.h string.h strings.h sys/time.h unistd.h wchar.h wctype.h getopt.h])
 
@@ -854,8 +849,7 @@ AC_SUBST(TCL_LDADD)
 AC_SUBST(TCL_DEFADD)
 AC_SUBST(TK_LDADD)
 
-AC_CONFIG_FILES([
-		Makefile
+AC_CONFIG_FILES([Makefile
 		doc/Makefile
 		contrib/Makefile
 		contrib/rtlbrowse/Makefile
